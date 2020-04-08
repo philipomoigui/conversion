@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 type feet float64
 type centimeter float64
-type minutes int
+type minutes float64
 type seconds float64
 type Fahrenheit float64
 type celsius float64
@@ -18,8 +19,6 @@ type miles float64
 type kilometer float64
 
 type converter struct{}
-
-const pi = 3.14159
 
 func main() {
 	cvr := converter{}
@@ -90,12 +89,12 @@ func (cvr converter) fahrenheitToCelsius(f Fahrenheit) celsius {
 }
 func (cvr converter) degreesToRadian(d degrees) radian {
 	// Conversion code
-	return radian(d * pi / 180)
+	return radian(d * math.Pi / 180)
 }
 
 func (cvr converter) radianToDegrees(r radian) degrees {
 	// Conversion code
-	return degrees(r * 180 / pi)
+	return degrees(r * 180 / math.Pi)
 }
 
 func (cvr converter) kilogramToPounds(k kilogram) pounds {
