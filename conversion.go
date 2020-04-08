@@ -5,20 +5,21 @@ import (
 	"math"
 )
 
-type feet float64
-type centimeter float64
-type minutes float64
-type seconds float64
-type Fahrenheit float64
-type celsius float64
-type degrees float64
-type radian float64
-type pounds float64
-type kilogram float64
-type miles float64
-type kilometer float64
-
-type converter struct{}
+type (
+	feet       float64
+	centimeter float64
+	minutes    float64
+	seconds    float64
+	Fahrenheit float64
+	celsius    float64
+	degrees    float64
+	radian     float64
+	pounds     float64
+	kilogram   float64
+	miles      float64
+	kilometer  float64
+	converter  struct{}
+)
 
 func main() {
 	cvr := converter{}
